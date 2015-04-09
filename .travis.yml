@@ -9,6 +9,7 @@ notifications:
 before_install:
     - npm install -g grunt-cli
     - npm install -g bower
+    - gem install sass
 install:
     - npm install
     - bower install
