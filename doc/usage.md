@@ -14,13 +14,13 @@ If you want to build the project locally, you have to run the [Grunt](http://gru
 You should add to project stylesheet and link it in the header of your HTML file, like so:
 
         <!-- This is how you would link your penguin stylesheet -->
-        <link rel="stylesheet" href="dist/css/penguin.min.css">
+        <link rel="stylesheet" href="lib/css/penguin.min.css">
     </head>
 
 If you are using any penguin JavaScript components, this needs to be loaded on the page. You do not forget add jQuery to project, penguin components require jQuery to be included. We recommend at the end before your closing <body> tags like so:
 
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="dist/js/penguin.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="penguin/js/penguin.min.js"></script>
         <script>
             $('body').modal();
         </script>
@@ -28,13 +28,33 @@ If you are using any penguin JavaScript components, this needs to be loaded on t
 
 Also you can load only the components you need for your project:
 
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <!-- Alerts -->
-        <script src="dist/js/components/alert.js"></script>
+        <script src="penguin/js/components/alert.js"></script>
         <!-- Dropdowns -->
-        <script src=""dist/js/components/dropdown.js"></script>
+        <script src=""penguin/js/components/dropdown.js"></script>
         <!-- Modal -->
-        <script src=""dist/js/components/modal.js"></script>
+        <script src=""penguin/js/components/modal.js"></script>
         <!-- Spinner -->
-        <script src=""dist/js/components/spinner.js"></script>
+        <script src=""penguin/js/components/spinner.js"></script>
     </body>
+
+> Working with [RequireJS](http://requirejs.org):
+    
+    'use strict'
+
+    require.config({
+        paths: {
+            'penguin': 'path-to-penguin/penguin/lib/penguin.js'
+        }      
+    });
+
+You can also add a single JavaSript component:
+
+    'use strict'
+
+    require.config({
+        paths: {
+            'penguin.modal': 'path-to-penguin/penguin/src/js/modal.js'
+        }      
+    });

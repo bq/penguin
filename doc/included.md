@@ -1,8 +1,8 @@
     penguin/
     ├──  bower_components/
-    │       └── jQuery/
+    │       └── jquery/
     │
-    ├── dist/
+    ├── lib/
     │   ├── css/
     │   │   ├── penguin.css
     │   │   └── penguin.min.css
