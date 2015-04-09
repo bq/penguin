@@ -127,9 +127,13 @@ The dropdown plugin toggling the '.dropdown--selected' class and [data-selected]
 
 >By default, these are the sass variables values:
 
-    @grid-columns:              12;
-    @grid-gutter-width:         30px;
+    $grid-columns             : 12;
+    $grid-gutter              : 30;
 
+> You can choose your own prefix class which is associted to each breakpoint:
+
+    $slicer-breakpoints       : 0       400px       600px       800px       1050px;
+    $slicer-breakpoint-names  : 'a'     'b'         'c'         'd'         'e';
 
 
 
