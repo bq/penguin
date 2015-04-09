@@ -445,8 +445,14 @@ Just add [data-tab] attribute to a tab.
 
 ###text (css)
 
-> Styles for all of the most basic typographical elements. Remeber to use all the elements inside the .text wrapper:
+> Styles for all of the most basic typographical elements. Remember to use all the elements inside the .text wrapper:
 
     <div class="text">
         <!-- Place here the html element -->
     </div>
+
+> Also, you can use specific classes for heading styles (.h1, .h2, .h3, .h4, .h5, .h6):
+
+    <article>
+        <h1 class="h3"><!-- Place here your title --></h1>
+    </article>
