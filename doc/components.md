@@ -135,6 +135,11 @@ The dropdown plugin toggling the '.dropdown--selected' class and [data-selected]
     $slicer-breakpoints       : 0       400px       600px       800px       1050px;
     $slicer-breakpoint-names  : 'a'     'b'         'c'         'd'         'e';
 
+> After that, you have your classes created with the choosen prefix (col-[slicer-breakpoint-names]-12):
+
+    <div class="row">
+        <div class="col-a-2 col-b-4 col-c-6 col-d-8 col-e-12"></div>
+    </div>
 
 
 ###modal (css, js)
