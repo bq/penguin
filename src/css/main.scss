@@ -1,74 +1,108 @@
-// Base: Variables
-@import "base/_variables";
+# Examples
 
-// Components: Variables
-@import "components/_variables";
+## main.scss example
 
-// Base: Mixins
-@import "base/_mixins";
+    /*
 
-// Base: Reset
-@import "base/_reset";
+        Example of how to import penguin to your project,
+        adding your own theme styles.
 
-// Base: Print
-@import "base/_print";
+        ---------
 
-// Base: Scaffolding (optional)
-@import "base/_scaffolding";
+        path_to_penguin: directory where penguin is (for example: app/bower_components/penguin)
+        path_to_theme: directory where your project theme is (for example: app/css)
 
-// Base: Utils
-@import "base/_utils";
+    */
 
-// Base: Responsive utilities
-@import "base/_responsive";
+    // Base: Variables
+    @import "path_to_penguin/base/_variables";
+    @import "path_to_theme/base/_variables";
 
-// Base: Grid system
-@import "base/_grid";
+    // Components: Variables
+    @import "path_to_penguin/components/_variables";
+    @import "path_to_theme/components/_variables";
 
-// Components: Animations
-@import "base/_animations";
+    // Base: Scaffolding (optional)
+    @import "path_to_penguin/base/_scaffolding";
+    @import "path_to_theme/base/_scaffolding";
 
-// Components: Alert
-@import "components/alert";
+    // Base: Mixins
+    @import "path_to_penguin/base/_mixins";
 
-// Components: Text
-@import "components/text";
+    // Base: Reset
+    @import "path_to_penguin/base/_reset";
 
-// Components: Dropdown
-@import "components/_dropdown";
+    // Base: Print
+    @import "path_to_penguin/base/_print";
 
-// Components: Button
-@import "components/_button";
+    // Base: Utils
+    @import "path_to_penguin/base/_utils";
 
-// Components: Navigation
-@import "components/_navigation";
+    // Base: Responsive utilities
+    @import "path_to_penguin/base/_responsive";
 
-// Components: Tab
-@import "components/_tab";
+    // Base: Grid system
+    @import "path_to_penguin/base/_grid";
 
-// Components: Breadcumb
-@import "components/_breadcrumb";
+    // Components: Animations
+    @import "path_to_penguin/base/_animations";
 
-// Components: Table
-@import "components/_table";
+    // Components: Alert
+    @import "path_to_penguin/components/alert";
+    @import "path_to_theme/components/alert";
 
-// Components: Form
-@import "components/_form";
+    // Components: Text
+    @import "path_to_penguin/components/text";
+    @import "path_to_theme/components/text";
 
-// UI Components: Icon
-@import "components/_icon";
+    // Components: Dropdown
+    @import "path_to_penguin/components/_dropdown";
+    @import "path_to_theme/components/_dropdown";
 
-// UI Components: Modal
-@import "components/_modal";
+    // Components: Button
+    @import "path_to_penguin/components/_button";
+    @import "path_to_theme/components/_button";
 
-// Components: Banner
-@import "components/_banner";
+    // Components: Navigation
+    @import "path_to_penguin/components/_navigation";
+    @import "path_to_theme/components/_navigation";
 
-// Components: Spinner
-@import "components/_spinner";
+    // Components: Tab
+    @import "path_to_penguin/components/_tab";
+    @import "path_to_theme/components/_tab";
 
-// Components: Paginator
-@import "components/_paginator";
+    // Components: Breadcumb
+    @import "path_to_penguin/components/_breadcrumb";
+    @import "path_to_theme/components/_breadcrumb";
 
-// Components: Panel
-@import "components/_panel";
+    // Components: Table
+    @import "path_to_penguin/components/_table";
+    @import "path_to_theme/components/_table";
+
+    // Components: Form
+    @import "path_to_penguin/components/_form";
+    @import "path_to_theme/components/_form";
+
+    // UI Components: Icon
+    @import "path_to_penguin/components/_icon";
+    @import "path_to_theme/components/_icon";
+
+    // UI Components: Modal
+    @import "path_to_penguin/components/_modal";
+    @import "path_to_theme/components/_modal";
+
+    // Components: Banner
+    @import "path_to_penguin/components/_banner";
+    @import "path_to_theme/components/_banner";
+
+    // Components: Spinner
+    @import "path_to_penguin/components/_spinner";
+    @import "path_to_theme/components/_spinner";
+
+    // Components: Paginator
+    @import "path_to_penguin/components/_paginator";
+    @import "path_to_theme/components/_paginator";
+
+    // Components: Panel
+    @import "path_to_penguin/components/_panel";
+    @import "path_to_theme/components/_panel";
