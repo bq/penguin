@@ -1,0 +1,64 @@
+// /*------------------------------------*\
+//     #RESPONSIVE-UTILITIES-PENGUIN
+// \*------------------------------------*/
+
+@mixin media-minwidth($breakpoint-name) {
+
+    $index-name: index($slicer-breakpoint-names, $breakpoint-name);
+    $length-slicer: length($slicer-breakpoint-names);
+
+    @if $index-name > 1 {
+        $breakpoint-value: nth($slicer-breakpoints, $index-name);
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+
+}
+
+@mixin penguin-visibility($slicer-values: $slicer-breakpoints, $slicer-names: $slicer-breakpoint-names) {
+    @each $slice in $slicer-values {
+        $index: index($slicer-values, $slice);
+        $length: length($slicer-values);
+    
+        @if $index > 1 and $index < $length {
+            @media (min-width: rem($slice)) and (max-width: rem(nth($slicer-values, $index + 1) - 1)) {
+                @include penguin-visible(nth($slicer-names, $index));
+            }            
+        } @else if $index == $length{
+            @media (min-width: rem($slice)) {
+                @include penguin-visible(nth($slicer-names, $index));
+            }
+        } @else {
+            @media (max-width: rem(nth($slicer-values, $index + 1) - 1)) {
+                @include penguin-visible(nth($slicer-names, $index));
+            }
+        }
+    }       
+}    
+
+@mixin penguin-visible($slice) {
+    .visible-#{$slice} {
+        display: inherit !important;
+    }
+    .hidden-#{$slice} {
+        display: none !important;
+    }
+}
+
+@if $responsive-visibility == true {
+
+    // Sets visibility clases
+    *[class*="visible-"] {
+        display: none !important;
+    }
+
+    *[class*="hidden-"] {
+        display: inherit !important;
+    }
+
+    // Generates responsive classes
+    @include penguin-visibility;
+}

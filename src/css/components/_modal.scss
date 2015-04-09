@@ -1,0 +1,66 @@
+@if $styles-modal == true {
+
+    /*------------------------------------*\
+        #MODAL-PENGUIN
+    \*------------------------------------*/
+
+    .modal {
+        -webkit-overflow-scrolling: touch;
+        outline: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $zindex-modal;
+        margin: auto;
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+        .modal__dialog {
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            z-index: $zindex-modal + 1;
+        }
+
+        .modal__dialog__content {
+            cursor: default;
+            max-height: 100%;
+            margin: auto;
+            position: relative;
+            background-clip: padding-box;
+            outline: none;
+        }
+
+        .modal__header {
+            position: relative;
+        }
+
+            .modal__close {
+                position: absolute;
+            }
+
+        .modal__body,
+        .modal__footer {
+            position: relative;
+        }
+
+
+    .modal--backdrop {
+        background-color: $modal-backdrop-bg;
+    }
+
+    .modal--fullscreen {
+        position: fixed;
+    }
+
+
+    .modal-parent {
+        position: relative !important;
+    }
+
+}

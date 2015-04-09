@@ -1,0 +1,53 @@
+@if $styles-paginator == true {
+
+    /*------------------------------------*\
+        #PAGINATOR-PENGUIN
+    \*------------------------------------*/
+
+    .paginator {}
+
+        .paginator__item {
+            position: relative;
+
+            .paginator--bar & {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .paginator--inline & {
+                display: inline-block;
+                word-spacing: normal;
+            }
+
+        }
+
+            .paginator__link {
+                text-decoration: none;
+                line-height: normal;
+                display: inline-block;
+
+                .paginator__item--selected & {
+                    cursor: not-allowed;
+                    cursor: default;
+                }
+
+                .paginator--bar & {
+                    display: block;
+                }
+
+            }
+
+
+    .paginator--bar {
+        display: table;
+        width: 100%;
+        position: relative;
+    }
+
+    .paginator--inline {
+        word-spacing: -(em(5));
+        word-spacing: em(-5);
+    }
+
+}

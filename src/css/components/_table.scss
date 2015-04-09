@@ -1,0 +1,24 @@
+@mixin cells {
+    td,
+    th {
+        @content;
+    }
+}
+
+
+@if $styles-table == true {
+
+    /*------------------------------------*\
+        #TABLE-PENGUIN
+    \*------------------------------------*/
+
+    .table {
+        cursor: default;
+        width: 100%;
+
+        tr:nth-child(odd) {}
+        tr:nth-child(even) {}
+
+    }
+
+}

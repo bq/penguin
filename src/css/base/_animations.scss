@@ -1,0 +1,34 @@
+@if $animation-effects == true {
+
+    /*------------------------------------*\
+        #ANIMATION-EFFECTS-PENGUIN
+    \*------------------------------------*/
+
+    .animated {
+        @include transition-duration($transition-duration);
+        transition-timing-function: $transition-timing;
+        @include transition-delay($transition-delay);
+    }
+
+    .animated--fade {
+        @include transition-property(opacity);
+        display: block !important;
+        opacity: 1 !important;
+    }
+
+    .animated--fade--hidden {
+        opacity: 0 !important;
+    }
+
+    .animated--slide {
+        @include transition-property(max-height);
+        display: block !important;
+        overflow-y: hidden;
+        max-height: 400% !important;
+    }
+
+    .animated--slide--hidden {
+        max-height: 0 !important;
+    }
+
+}

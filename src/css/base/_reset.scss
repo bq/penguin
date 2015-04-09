@@ -1,0 +1,231 @@
+/*------------------------------------*\
+    #RESET-STYLES-PENGUIN
+\*------------------------------------*/
+
+// Note: Global reset rules
+
+// Reset the box model measurements.
+@mixin reset-box-model {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+// Reset the font and vertical alignment.
+@mixin reset-font {
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+// Reset fonts for relevant elements
+@mixin reset-font {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+// Resets the outline when focus.
+// For accessibility you need to apply some styling in its place.
+@mixin reset-focus {
+    outline: 0;
+}
+
+// Reset a body element.
+@mixin reset-body {
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+// Reset the list style of an element.
+@mixin reset-list-style {
+    list-style: none;
+}
+
+// Reset a table
+@mixin reset-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Reset a table cell (`th`, `td`)
+@mixin reset-table-cell {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+// Reset a quotation (`q`, `blockquote`)
+@mixin reset-quotation {
+    quotes: none;
+    &:before, &:after {
+        content: "";
+        content: none;
+    }
+}
+
+// Resets the border.
+@mixin reset-image-anchor-border {
+    border: none;
+}
+
+// Remove tap highlight color
+@mixin remove-tap-highlight-color {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+// Reset appearance
+@mixin reset-appearance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+// Reset buttons element
+@mixin reset-button {
+    overflow: visible;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+// Reset input states
+@mixin reset-input-state {
+
+    &[type=number]::-webkit-inner-spin-button, &[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    &[type="radio"], &[type="checkbox"] {
+        padding: 0 !important;
+        border: none;
+        width: auto !important;
+        cursor: pointer;
+    }
+
+    &[type="button"], &[type="submit"], &[type="image"] {
+        cursor: pointer;
+        outline: 0;
+        overflow: visible;
+        -webkit-appearance: button;
+    }
+
+    &[type="disabled"], &[disabled], &[readonly], fieldset[disabled] & {
+        cursor: not-allowed;
+        cursor: default;
+        outline: 0;
+        overflow: visible;
+        -webkit-appearance: button;
+    }
+}
+
+// Unrecognized elements are displayed inline.
+// This reset provides a basic reset for block html5 elements
+// so they are rendered correctly in browsers that don't recognize them
+// and reset in browsers that have default styles for them.
+@mixin reset-html5 {
+    article, aside, audio, canvas, figcaption, figure, footer, header, hgroup, output, section,  video {
+        display: block;
+    }
+}
+
+// Reset specific styles: Internet Explorer <= 8
+@mixin reset-lt-ie8 {
+    .lt-ie8 input[type="checkbox"] {
+        vertical-align: baseline;
+    }
+    .lt-ie8 legend {
+        margin-left: -7px;
+    }
+    /* Bicubic img IE */
+    .lt-ie8 img {
+        -ms-interpolation-mode: bicubic;
+    }
+}
+
+
+/**
+ * Based on [Eric Meyer's reset 2.0](http://meyerweb.com/eric/tools/css/reset/index.html)
+ * Global reset rules.
+ * For more specific resets, use the reset mixins provided below
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, textarea, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    @include reset-box-model;
+    @include reset-font;
+}
+
+/**
+ * Unlike Eric's original reset, we reset the html element to be compatible
+ * with the vertical rhythm mixins.
+ */
+
+html {
+    @include reset-body;
+}
+
+ol, ul {
+    @include reset-list-style;
+}
+
+table {
+    @include reset-table;
+}
+
+caption, th, td {
+    @include reset-table-cell;
+}
+
+q, blockquote {
+    @include reset-quotation;
+}
+
+a, button {
+    @include remove-tap-highlight-color;
+}
+
+a img {
+    @include reset-image-anchor-border;
+}
+
+select, input, textarea {
+    @include reset-font;
+}
+
+button {
+    @include reset-button;
+    @include reset-appearance;
+}
+
+input {
+    @include reset-input-state;
+}
+
+input,
+button,
+select,
+textarea {
+    @include reset-focus;
+}
+
+@include reset-html5;
+
+@include reset-lt-ie8;

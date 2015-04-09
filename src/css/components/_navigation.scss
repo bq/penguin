@@ -1,0 +1,127 @@
+// Fix menu
+// example:
+// $nav-fixed-x: (top, 0);
+// $nav-fixed-y: (left, 0);
+// @include fix-menu($nav-fixed-x, $nav-fixed-y);
+
+@mixin fix-menu($x, $y) {
+    position: fixed;
+    width: 100%;
+    #{nth($y, 1)}: #{nth($y, 2)};
+    #{nth($x, 1)}: #{nth($x, 2)};
+}
+
+// Base
+@if $styles-navigation == true {
+
+    /*------------------------------------*\
+        #NAVIGATION-PENGUIN
+    \*------------------------------------*/
+
+    .nav {}
+
+        .nav__menu {
+
+            .nav--inline & {
+                @include clearfix;
+            }
+
+            .nav--bar & {
+                display: table;
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .nav--fluid & {
+                display: table;
+                height: 100%;
+                position: relative;
+            }
+
+        }
+
+            .nav__menu__item {
+                position: relative;
+
+                .nav--inline & {
+                    float: left;
+                }
+
+                .nav--bar & {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 100%;
+                    text-align: center;
+                }
+
+                .nav--fluid & {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 100%;
+                    text-align: center;
+                }
+
+            }
+
+                .nav__menu__link {
+                    text-decoration: none;
+                    line-height: normal;
+                    display: inline-block;
+
+                    .nav__menu__item--selected & {
+                        cursor: not-allowed;
+                        cursor: default;
+                    }
+
+                    .nav--bar & {
+                        display: block;
+                    }
+
+                    .nav--stacked & {
+                        display: block;
+                    }
+
+                }
+
+                    .nav__submenu {
+
+                        .nav--inline & {
+                            min-width: 100%;
+                        }
+
+                        .nav--bar & {
+                            min-width: 100%;
+                        }
+
+                        .nav--fluid & {
+                            min-width: 100%;
+                        }
+
+                    }
+
+                        .nav__submenu__item {
+
+                            .nav--bar & {
+                                text-align: left;
+                            }
+
+                            .nav--fluid & {
+                                text-align: left;
+                            }
+
+                        }
+
+                            .nav__submenu__link {
+                                text-decoration: none;
+                                line-height: normal;
+                                display: inline-block;
+
+                                .nav__submenu__item--selected & {
+                                    cursor: not-allowed;
+                                    cursor: default;
+                                }
+
+                            }
+
+}

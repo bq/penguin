@@ -1,0 +1,60 @@
+// /*------------------------------------*\
+//     #GLOBAL VALUES
+// \*------------------------------------*/
+
+// Brand colors
+$brand-primary            : #272822 !default;
+$brand-primary-text       : #000 !default;
+$brand-secondary          : #dddddd !default;
+$brand-secondary-text     : #dddddd !default;
+
+// Links
+$link-color               : $brand-primary !default;
+$link-hover-color         : false !default;
+$link-active-color        : false !default;
+$link-visited-color       : false !default;
+$link-focus-color         : false !default;
+
+// Text
+$selection-text-color-bg  : $brand-secondary !default;
+$selection-text-color     : invert($brand-primary) !default;
+
+// Typography
+$font-family-base         : "Arial", Helvetica, Sans-serif !default;
+$font-size-small          : 13 !default;
+$font-size-base           : 16 !default;
+$font-size-medium         : 18 !default;
+$font-size-large          : 20 !default;
+$line-height-base         : 22 !default;
+
+// Scaffolding
+$body-font-size           : $font-size-base !default;
+$body-bg                  : white !default;
+$body-color               : #8F908A !default;
+
+// Print
+$print-text-color         : $brand-primary-text !default;
+$print-link-visited-color : $brand-primary  !default;
+$print-border-color       : $brand-secondary !default;
+$print-page-margin        : 0.5cm !default;
+
+// Breakpoints
+$slicer-breakpoints       : 0		400px		600px	 	800px	 	1050px !default;
+$slicer-breakpoint-names  : 'a' 	'b' 		'c' 		'd' 		'e' !default;
+
+// Grid
+$grid-system              : true !default;
+$grid-columns             : 12 !default;
+$grid-gutter              : 30 !default;
+
+// Responsive
+$responsive-visibility    : true !default;
+
+// Utils
+$utils-classes            : true !default;
+
+// Animations
+$animation-effects        : true !default;
+$transition-duration      : 0.5s !default;
+$transition-timing        : linear !default;
+$transition-delay         : 0 !default;

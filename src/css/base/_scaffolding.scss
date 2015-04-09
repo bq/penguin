@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #SCAFFOLDING-PENGUIN
+\*------------------------------------*/
+
+/**
+ * Note: Project settings
+ */
+
+
+// BEM Syntax
+// .person{}
+// .person__hand{}
+// .person--female{}
+// .person--female__hand{}
+// .person__hand--left{}
+
+// Reset the box-sizing
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+
+// Selection text
+@include selection-text($selection-text-color-bg, $selection-text-color);
+
+
+// Body reset
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: $font-family-base;
+    @include font-size($body-font-size, 16);
+    @include line-height($font-size-base, $line-height-base);
+    color: $body-color;
+    background-color: $body-bg;
+    height: 100%;
+}
+
+
+// Images
+img {
+    @include img-responsive;
+}
+
+
+// Links
+a {
+    cursor: pointer;
+    @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color);
+    @include hover-link;
+}

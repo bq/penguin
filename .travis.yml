@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "0.10"
+notifications:
+  email:
+    recipients: front-end@bq.com
+    on_success: change
+    on_failure: never
+before_install:
+    - npm install -g grunt-cli
+    - npm install -g bower
+install:
+    - npm install
+    - bower install
+script:
+    - grunt build
+branches:
+  only:
+  - master

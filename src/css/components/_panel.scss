@@ -1,0 +1,18 @@
+@if $styles-panel == true {
+
+    /*------------------------------------*\
+        #PANEL-PENGUIN
+    \*------------------------------------*/
+
+    .panel {}
+
+        .panel__dropdown-link {
+            position: absolute;
+        }
+
+
+    .panel--dropdown {
+        position: relative;
+    }
+
+}

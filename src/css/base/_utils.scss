@@ -1,0 +1,128 @@
+@if $utils-classes == true {
+
+    /*------------------------------------*\
+        #UTILS-PENGUIN
+    \*------------------------------------*/
+
+    // Note: Helper classes
+
+
+    /**
+     * Floats
+     */
+
+    .clearfix {
+        @include clearfix;
+    }
+
+
+    .center-block {
+        @include center-block;
+    }
+
+
+    .pull-right {
+        float: right !important;
+    }
+
+    .pull-left {
+        float: left !important;
+    }
+
+
+    /**
+     * Togling content
+     */
+
+    .hide {
+        display: none !important;
+    }
+
+    .show {
+        display: block !important;
+    }
+
+
+    /**
+     * Hide from screenreaders and browsers
+     */
+
+    .hidden {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    .invisible {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+
+    /**
+     * Text
+     */
+
+    .text-hide {
+        font-size: initial;
+        color: transparent;
+        text-shadow: none;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-small {
+        @include font-size($font-size-small);
+    }
+
+    .text-medium {
+        @include font-size($font-size-medium);
+    }
+
+    .text-large {
+        @include font-size($font-size-small);
+    }
+
+
+    /**
+     * Format
+     */
+
+    .bold {
+        font-weight: bold !important;
+    }
+
+    .normal {
+        font-weight: bold !important;
+    }
+
+    .cursive {
+        font-weight: bold !important;
+    }
+
+    .underline {
+        text-decoration: underline !important;
+    }
+
+}

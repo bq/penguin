@@ -1,0 +1,49 @@
+@if $styles-dropdown == true {
+
+    /*------------------------------------*\
+        #DROPDOWN-PENGUIN
+    \*------------------------------------*/
+
+    .dropdown {
+        position: relative;
+    }
+
+        [data-dropdown] {
+
+            .dropdown & {
+                position: absolute;
+                top: 100%;
+                z-index: 100;
+                display: none;
+            }
+
+            [data-selected] & {
+                display: block !important;
+            }
+
+            .dropdown--stacked & {
+                position: static;
+            }
+
+        }
+
+        .dropdown__link,
+        .dropdown__menu__link {
+            text-decoration: none;
+            line-height: normal;
+            display: inline-block;
+        }
+
+
+    .dropdown--fluid {
+        display: inline-block;
+
+        .dropdown__link,
+        .dropdown__menu,
+        .dropdown__menu__link {
+            min-width: 100%;
+        }
+
+    }
+
+}

@@ -1,0 +1,34 @@
+@if $styles-breadcrumb == true {
+
+    /*------------------------------------*\
+        #BREADCRUMB-PENGUIN
+    \*------------------------------------*/
+
+    .breadcrumb {}
+
+        .breadcrumb__menu__item {
+            display: inline;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                &:after {
+                    content: '';
+                }
+
+            }
+        }
+
+            .breadcrumb__menu__link {
+                display: inline-block;
+            }
+
+            .breadcrumb__icon {
+                display: inline-block;
+            }
+
+}

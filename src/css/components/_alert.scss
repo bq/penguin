@@ -1,0 +1,41 @@
+@if $styles-alert == true {
+
+    /*------------------------------------*\
+        #ALERT-PENGUIN
+    \*------------------------------------*/
+
+    .alert {
+        position: relative;
+    }
+
+        .alert__content {
+            position: relative;
+
+            .alert--inline & {
+                display: inline-block;
+            }
+
+            .alert--success & {}
+
+            .alert--info & {}
+
+            .alert--warning & {}
+
+            .alert--error & {}
+
+        }
+
+            .alert__close {
+                position: absolute;
+            }
+
+
+    .alert--center {
+        text-align: center;
+    }
+
+    .alert--right {
+        text-align: right;
+    }
+
+}

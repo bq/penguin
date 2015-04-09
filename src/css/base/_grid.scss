@@ -1,0 +1,136 @@
+// /*------------------------------------*\
+//     #GRID-SYSTEM-PENGUIN
+// \*------------------------------------*/
+
+@mixin penguin-grid($slicer-values: $slicer-breakpoints, $slicer-names: $slicer-breakpoint-names) {
+    @each $slice in $slicer-values {
+        $index: index($slicer-values, $slice);
+    
+        @if $index > 1 {
+            @media (min-width: rem($slice)) {
+                @include penguin-cols($slicer-names, $index);
+            }            
+        } @else { 
+            @include penguin-cols($slicer-names, $index);
+        }
+    }       
+}
+
+@mixin penguin-cols($breakpoint-names, $slice) {
+    @for $i from 1 through $grid-columns {
+        .col-#{nth($breakpoint-names, $slice)}-#{$i} {
+            width: percentage($i / $grid-columns);
+        }
+        .col-#{nth($breakpoint-names, $slice)}-push-#{$i} {
+            left: percentage($i / $grid-columns);
+        }
+        .col-#{nth($breakpoint-names, $slice)}-pull-#{$i} {
+            right: percentage($i / $grid-columns);
+        }
+        .col-#{nth($breakpoint-names, $slice)}-offset-#{$i} {
+            margin-left: percentage($i / $grid-columns);
+        }
+    }
+
+    .col-#{nth($breakpoint-names, $slice)}-push-0 {
+        left: auto;
+    }
+    .col-#{nth($breakpoint-names, $slice)}-pull-0 {
+        right: auto;
+    }
+}
+
+@mixin penguin-container-responsive($slicer-values: $slicer-breakpoints) {
+    $length: length($slicer-values);
+
+    @if ($length > 1) {
+
+        @for $index from 2 through $length {
+            @if $index < $length {
+                @media (min-width: rem(nth($slicer-values, $index))) and (max-width: rem(nth($slicer-values, $index + 1) - 1)) {
+                    width: rem(nth($slicer-values, $index));
+                }
+            } @else {
+                @media (min-width: rem(nth($slicer-values, $index))) {
+                    width: rem(nth($slicer-values, $index));
+                }
+            }
+        }
+    }        
+}
+
+@mixin penguin-grid-gutter($gutter: $grid-gutter) {
+    padding-left: rem($gutter / 2);
+    padding-right: rem($gutter / 2);
+}
+
+@mixin penguin-grid-collapse($gutter: $grid-gutter) {
+    margin-left: -(rem($gutter / 2));
+    margin-right: -(rem($gutter / 2));    
+}
+
+@if $grid-system == true {
+
+    // Default style columns
+    *[class*="col-"] {
+        position: relative;
+        min-height: 1px;
+        @include penguin-grid-gutter($grid-gutter);
+        float: left;
+    }
+
+    // Grid system
+    @include penguin-grid;
+    
+    // Container
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        @include penguin-grid-gutter($grid-gutter);
+        @include clearfix;
+    }
+
+    // Container responsive
+    .container--responsive {
+        @include penguin-container-responsive;
+    }
+
+    // Rows
+    .row {
+        @include clearfix;
+
+        .row,
+        &.row--collapse {
+            @include penguin-grid-collapse($grid-gutter);
+        }
+
+        &.row--collapse-cols {
+            > [class^="col-"] {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &.row--inline {
+            word-spacing: -(rem(4.5));
+            > * {
+                word-spacing: normal;
+            }
+            > *[class*="col-"] {
+                float: none !important;
+                display: inline-block;
+            }
+        }
+
+        &.row--table {
+            display: table;
+            height: 100%;
+            width: 100%;
+            > [class^="col-"] {
+                float: none !important;
+                display: table-cell;
+                height: 100%;
+            }
+        }
+    }
+}

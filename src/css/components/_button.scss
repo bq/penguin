@@ -1,0 +1,99 @@
+@mixin button($color, $background, $border, $border-color) {
+    color: $color;
+    background-color: $background;
+
+    @if $border != none {
+        border: $border $border-color;
+    }
+
+}
+
+@mixin button-events($color-hover, $background-hover, $border-color-hover, $background-active) {
+
+    &:hover,
+    &:focus {
+        color: $color-hover;
+        background-color: $background-hover;
+        text-decoration: $button-text-decoration;
+
+        @if $border-color-hover != none {
+            border-color: $border-color-hover;
+        }
+
+    }
+
+    &:active {
+        background-color: $background-active;
+    }
+
+}
+
+@if $styles-button == true {
+
+    /*------------------------------------*\
+        #BUTTONS-PENGUIN
+    \*------------------------------------*/
+
+    .btn {
+        line-height: normal;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        &[disabled] {
+            cursor: not-allowed;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .icon, .fa {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    }
+
+    .btn--disabled {
+        cursor: not-allowed;
+        cursor: default;
+        pointer-events: none;
+    }
+
+
+    .btn-group {
+        clear: both;
+
+        li {
+            display: inline-block;
+
+            &:first-child {
+
+                .btn {
+                    margin-left: 0;
+                }
+
+            }
+
+            &:last-child {
+
+                .btn {
+                    margin-right: 0;
+                }
+
+            }
+
+        }
+
+        > .btn {
+
+            &:only-child {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,63 @@
+// Mixin
+@mixin inputs {
+    input,
+    select,
+    textarea {
+        @content;
+    }
+}
+
+@if $styles-form == true {
+
+    /*------------------------------------*\
+        #FORM-PENGUIN
+    \*------------------------------------*/
+
+    .form {
+        clear: both;
+    }
+
+        .form-control {}
+
+        .form-control--inline {
+            display: inline-block;
+        }
+
+
+        .input:not(.input--checkbox):not(.input--radio) {
+            display: block;
+
+            .form & {
+
+                @include inputs {
+                    width: 100%;
+                }
+
+                input, select {
+                    vertical-align: middle;
+                }
+
+                textarea {
+                    vertical-align: top;
+                }
+
+            }
+
+        }
+
+        .input--radio,
+        .input--checkbox {
+            display: inline-block !important;
+            vertical-align: text-bottom;
+        }
+
+        .input--icon {
+            position: relative;
+
+            .icon, .fa {
+                @include place-center;
+            }
+
+        }
+
+}

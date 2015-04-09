@@ -1,0 +1,46 @@
+{
+    "name": "penguin",
+    "version": "0.0.1",
+    "description": "penguin is a lightweight and extensible front-end framework built with Sass to kickstart any web project.",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:bq/penguin.git"
+    },
+    "main": "lib/js/penguin.min.js",
+    "ignore": [
+        ".gitignore",
+        ".sass-cache",
+        ".travis.yml",
+        ".editorconfig",
+        "node_modules",
+        "bower_components"
+    ],
+    "license": "MIT",
+    "homepage": "http://penguin.bq.com",
+    "authors": [
+        "front-end bq <front-end@bq.com>",
+        "Álvaro Brito <alvaro.brito@bq.com> <alvarobr85@gmail.com>",
+        "Óscar Ferrándiz <oscar.ferrandiz@bq.com> <oferrandiz@gmail.com>"
+    ],
+    "contributors": [{
+        "name": "José Manuel Guzmán",
+        "email": "josemanuel.guzman@bq.com"
+    }, {
+        "name": "Javier López",
+        "email": "javier.lopez@bq.com"
+    }],
+    "dependencies": {
+        "jquery": "2.1.1"
+    },
+    "keywords": [
+        "penguin",
+        "jquery",
+        "javascript",
+        "ui",
+        "css",
+        "html5",
+        "sass",
+        "library",
+        "framework"
+    ]
+}

@@ -1,0 +1,35 @@
+
+@if $styles-icon == true {
+
+    /*------------------------------------*\
+        #ICON-PENGUIN
+    \*------------------------------------*/
+
+    .icon-text {
+        position: relative;
+
+        >.icon, >.fa  {
+            line-height: normal;
+            @include place-center;
+        }
+
+    }
+
+    .icon-text--justicon {
+
+        >.icon, >.fa {
+            @include translate(-50%, -50%);
+            left: 50%;
+        }
+
+    }
+
+    .icon-text--right {
+
+        >.icon, >.fa  {
+            left: initial;
+        }
+
+    }
+
+}

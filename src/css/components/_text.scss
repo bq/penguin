@@ -1,0 +1,47 @@
+@if $styles-typography == true {
+
+    /*------------------------------------*\
+        #TEXT-PENGUIN
+    \*------------------------------------*/
+
+    .h1, .text h1 {
+        @include font-size($h1-size);
+    }
+
+    .h2, .text h2 {
+        @include font-size($h2-size);
+    }
+
+    .h3, .text h3 {
+        @include font-size($h3-size);
+    }
+
+    .h4, .text h4 {
+        @include font-size($h4-size);
+    }
+
+    .h5, .text h5 {
+        @include font-size($h5-size);
+    }
+
+    .h6, .text h6 {
+        @include font-size($h6-size);
+    }
+
+    .lead, .text .lead {
+        @include font-size($lead-size);
+        letter-spacing: .1em;
+    }
+
+    .small, .text small {
+        @include font-size($small-size);
+    }
+
+    .text {
+        p, ul, ol {
+            @include font-size($text-size);
+            list-style-position: inside;
+        }
+    }
+
+}

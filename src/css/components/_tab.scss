@@ -1,0 +1,116 @@
+@if $styles-tab == true {
+
+    /*------------------------------------*\
+        #TAB-PENGUIN
+    \*------------------------------------*/
+
+    .tab {}
+
+        .tab__block {
+
+            .tab--inline & {
+                @include clearfix;
+            }
+
+            .tab--reverse & {
+                text-align: right;
+            }
+
+            .tab--bar & {
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+
+            .tab--stacked & {
+                display: table-cell;
+            }
+
+            .tab--stacked.tab--reverse & {
+                position: relative;
+            }
+
+        }
+
+            .tab__block__item,
+            .tab__button__item {
+                position: relative;
+            }
+
+            .tab__text__item,
+            .tab__block__item,
+            .tab__button__item {
+
+                .tab--inline & {
+                    display: inline-block;
+                }
+
+                .tab--bar & {
+                    display: table-cell;
+                    vertical-align: bottom;
+                    height: 100%;
+                    text-align: center;
+                }
+
+            }
+
+                .tab__block__link,
+                .tab__button__element {
+                    text-decoration: none;
+                    line-height: normal;
+                    display: inline-block;
+
+                    .tab__block__item--selected & {
+                        cursor: not-allowed;
+                        cursor: default;
+                    }
+
+                    .tab--bar & {
+                        display: block;
+                    }
+
+                    .tab--stacked & {
+                        display: block;
+                    }
+
+                }
+
+            .tab__text__item {
+                text-decoration: none;
+                line-height: normal;
+                display: inline-block;
+            }
+
+
+        .tab__content {
+
+            .tab--reverse & {
+                clear: both;
+            }
+
+            .tab--stacked & {
+                display: table-cell;
+            }
+
+            .tab--stacked.tab--reverse & {
+                position: relative;
+            }
+
+        }
+
+            .tab__content__item {
+                display: none;
+            }
+
+            .tab__content__item--selected {
+                display: block;
+            }
+
+
+    .tab--stacked {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+}

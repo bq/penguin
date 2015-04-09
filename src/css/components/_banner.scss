@@ -1,0 +1,35 @@
+@if $styles-banner == true {
+
+    /*------------------------------------*\
+        #BANNER-PENGUIN
+    \*------------------------------------*/
+
+    .banner {}
+
+        .banner__content {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+            .banner__content__item {
+                display: table-cell;
+                text-align: center;
+                vertical-align: top;
+            }
+
+            .banner__content__link {
+                display: inline-block;
+
+                .banner__content__item & {
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                    }
+
+                }
+
+            }
+
+}
