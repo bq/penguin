@@ -101,7 +101,7 @@
     }
 
     .text-large {
-        @include font-size($font-size-small);
+        @include font-size($font-size-large);
     }
 
 
@@ -114,11 +114,11 @@
     }
 
     .normal {
-        font-weight: bold !important;
+        font-weight: normal !important;
     }
 
     .cursive {
-        font-weight: bold !important;
+        font-style: italic !important;
     }
 
     .underline {
