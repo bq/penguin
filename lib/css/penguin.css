@@ -348,7 +348,7 @@ a:hover, a:focus {
 }
 
 .text-large {
-  font-size: 0.8125em;
+  font-size: 1.25em;
 }
 
 /**
@@ -359,11 +359,11 @@ a:hover, a:focus {
 }
 
 .normal {
-  font-weight: bold !important;
+  font-weight: normal !important;
 }
 
 .cursive {
-  font-weight: bold !important;
+  font-style: italic !important;
 }
 
 .underline {
