@@ -1,6 +1,6 @@
 {
     "name": "penguin",
-    "version": "0.0.3",
+    "version": "0.0.1",
     "description": "Penguin is a lightweight and extensible front-end framework built with Sass to kickstart any web project.",
     "repository": {
         "type": "git",
