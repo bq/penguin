@@ -7,19 +7,14 @@
     // Note: Helper classes
 
 
-    /**
-     * Floats
-     */
-
+    // Floats
     .clearfix {
         @include clearfix;
     }
 
-
     .center-block {
         @include center-block;
     }
-
 
     .pull-right {
         float: right !important;
@@ -30,10 +25,7 @@
     }
 
 
-    /**
-     * Togling content
-     */
-
+    // hide/show elements
     .hide {
         display: none !important;
     }
@@ -43,10 +35,7 @@
     }
 
 
-    /**
-     * Hide from screenreaders and browsers
-     */
-
+    // Hide for screenreaders and browsers
     .hidden {
         display: none !important;
         visibility: hidden !important;
@@ -64,51 +53,25 @@
     }
 
 
-    /**
-     * Text
-     */
-
-    .text-hide {
-        font-size: initial;
-        color: transparent;
-        text-shadow: none;
-        background-color: transparent;
-        border: 0;
+    // Aligments
+    .align-left {
+        text-align: left !important;
     }
 
-    .text-left {
-        text-align: left;
+    .align-right {
+        text-align: right !important;
     }
 
-    .text-right {
-        text-align: right;
+    .align-justify {
+        text-align: justify !important;
     }
 
-    .text-justify {
-        text-align: justify;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    .text-small {
-        @include font-size($font-size-small);
-    }
-
-    .text-medium {
-        @include font-size($font-size-medium);
-    }
-
-    .text-large {
-        @include font-size($font-size-large);
+    .align-center {
+        text-align: center !important;
     }
 
 
-    /**
-     * Format
-     */
-
+    // Format
     .bold {
         font-weight: bold !important;
     }

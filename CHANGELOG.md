@@ -2,8 +2,9 @@
 ### 0.0.2 (2015-04-13)
 
 
-<a name"0.0.3"></a>
-### 0.0.3 (2015-04-13)
+#### Features
+
+* **utils:** Text classes fixed 
 
 
 <a name"0.0.1"></a>

@@ -232,7 +232,7 @@ html {
 body {
   font-family: "Arial", Helvetica, Sans-serif;
   font-size: 1em;
-  line-height: 1.375;
+  line-height: 0.72727em;
   color: #8F908A;
   background-color: white;
   height: 100%;
@@ -257,9 +257,6 @@ a:hover, a:focus {
 /*------------------------------------*\
     #UTILS-PENGUIN
 \*------------------------------------*/
-/**
- * Floats
- */
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
@@ -282,9 +279,6 @@ a:hover, a:focus {
   float: left !important;
 }
 
-/**
- * Togling content
- */
 .hide {
   display: none !important;
 }
@@ -293,9 +287,6 @@ a:hover, a:focus {
   display: block !important;
 }
 
-/**
- * Hide from screenreaders and browsers
- */
 .hidden {
   display: none !important;
   visibility: hidden !important;
@@ -312,48 +303,22 @@ a:hover, a:focus {
   width: 1px;
 }
 
-/**
- * Text
- */
-.text-hide {
-  font-size: initial;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
+.align-left {
+  text-align: left !important;
 }
 
-.text-left {
-  text-align: left;
+.align-right {
+  text-align: right !important;
 }
 
-.text-right {
-  text-align: right;
+.align-justify {
+  text-align: justify !important;
 }
 
-.text-justify {
-  text-align: justify;
+.align-center {
+  text-align: center !important;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.text-small {
-  font-size: 0.8125em;
-}
-
-.text-medium {
-  font-size: 1.125em;
-}
-
-.text-large {
-  font-size: 1.25em;
-}
-
-/**
- * Format
- */
 .bold {
   font-weight: bold !important;
 }
@@ -1593,18 +1558,29 @@ a:hover, a:focus {
   font-size: 1em;
 }
 
-.lead, .text .lead {
-  font-size: 1.125em;
-  letter-spacing: .1em;
-}
-
-.small, .text small {
-  font-size: 0.75em;
-}
-
 .text p, .text ul, .text ol {
   font-size: 0.875em;
-  list-style-position: inside;
+}
+
+.text-small {
+  font-size: 0.75em;
+}
+.text .text-small {
+  font-size: 0.85714em;
+}
+
+.text-medium {
+  font-size: 1em;
+}
+.text .text-medium {
+  font-size: 1.14286em;
+}
+
+.text-large {
+  font-size: 1.125em;
+}
+.text .text-large {
+  font-size: 1.28571em;
 }
 
 /*------------------------------------*\

@@ -1,47 +1,57 @@
-@if $styles-typography == true {
+// Support for within text class
+@mixin within-text($size, $base: $text-size-base) {
+    font-size: em($size);
+    .text & {
+        font-size: em($size, $base);
+    }
+}
+
+@if $styles-text == true {
 
     /*------------------------------------*\
         #TEXT-PENGUIN
     \*------------------------------------*/
 
     .h1, .text h1 {
-        @include font-size($h1-size);
+        font-size: em($h1-size);
     }
 
     .h2, .text h2 {
-        @include font-size($h2-size);
+        font-size: em($h2-size);
     }
 
     .h3, .text h3 {
-        @include font-size($h3-size);
+        font-size: em($h3-size);
     }
 
     .h4, .text h4 {
-        @include font-size($h4-size);
+        font-size: em($h4-size);
     }
 
     .h5, .text h5 {
-        @include font-size($h5-size);
+        font-size: em($h5-size);
     }
 
     .h6, .text h6 {
-        @include font-size($h6-size);
-    }
-
-    .lead, .text .lead {
-        @include font-size($lead-size);
-        letter-spacing: .1em;
-    }
-
-    .small, .text small {
-        @include font-size($small-size);
+        font-size: em($h6-size);
     }
 
     .text {
         p, ul, ol {
-            @include font-size($text-size);
-            list-style-position: inside;
+            font-size: em($text-size-base);
         }
+    }
+
+    .text-small {
+        @include within-text($text-size-small);
+    }
+
+    .text-medium {
+        @include within-text($text-size-medium);
+    }
+
+    .text-large {
+        @include within-text($text-size-large);
     }
 
 }
