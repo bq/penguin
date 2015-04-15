@@ -34,7 +34,7 @@ html {
 body {
     font-family: $font-family-base;
     font-size: em($body-font-size, 16);
-    line-height: em($font-size-base, $line-height-base);
+    line-height: em($line-height-base, $font-size-base);
     color: $body-color;
     background-color: $body-bg;
     height: 100%;

@@ -142,7 +142,7 @@ article, aside, audio, canvas, figcaption, figure, footer, header, hgroup, outpu
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: #333333 !important;
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
@@ -232,7 +232,7 @@ html {
 body {
   font-family: "Arial", Helvetica, Sans-serif;
   font-size: 1em;
-  line-height: 0.72727em;
+  line-height: 1.375em;
   color: #8F908A;
   background-color: white;
   height: 100%;
@@ -1558,7 +1558,7 @@ a:hover, a:focus {
   font-size: 1em;
 }
 
-.text p, .text ul, .text ol {
+.text > p, .text > ul, .text > ol {
   font-size: 0.875em;
 }
 
@@ -1896,6 +1896,9 @@ a:hover, a:focus {
 }
 .form .input:not(.input--checkbox):not(.input--radio) textarea {
   vertical-align: top;
+}
+.form .input:not(.input--checkbox):not(.input--radio) input[type="file"] {
+  line-height: 1rem;
 }
 
 .input--radio,

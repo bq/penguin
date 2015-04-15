@@ -23,7 +23,6 @@
             display: inline-block;
         }
 
-
         .input:not(.input--checkbox):not(.input--radio) {
             display: block;
 
@@ -39,6 +38,10 @@
 
                 textarea {
                     vertical-align: top;
+                }
+
+                input[type="file"] {
+                    line-height: rem($font-size-base);
                 }
 
             }
