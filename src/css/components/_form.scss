@@ -52,6 +52,11 @@
         .input--checkbox {
             display: inline-block !important;
             vertical-align: text-bottom;
+
+            input {
+                vertical-align: middle;
+            }
+
         }
 
         .input--icon {
