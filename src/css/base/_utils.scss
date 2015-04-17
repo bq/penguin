@@ -25,22 +25,17 @@
     }
 
 
-    // hide/show elements
+    // Hide for screen readers and browsers
     .hide {
         display: none !important;
     }
 
+    // Visible for screen readers and browsers
     .show {
         display: block !important;
     }
 
-
-    // Hide for screenreaders and browsers
-    .hidden {
-        display: none !important;
-        visibility: hidden !important;
-    }
-
+    // Hide for browserws while still making it readable by screen readers
     .invisible {
         border: 0;
         clip: rect(0 0 0 0);
