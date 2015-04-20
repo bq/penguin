@@ -37,9 +37,15 @@
     }
 
     .text {
-        > p, > ul, > ol {
+
+        ul, ol, dl {
+            font-size: initial;
+        }
+
+        li, dt, dd, p {
             font-size: em($text-size-base);
         }
+
     }
 
     .text-small {
