@@ -52,6 +52,10 @@
             vertical-align: middle;
         }
 
+        .btn-group--fluid & {
+            width: 100%;
+        }
+
     }
 
     .btn--disabled {
@@ -67,8 +71,9 @@
 
     .btn-group {
         clear: both;
+    }
 
-        li {
+        .btn-group__item {
             display: inline-block;
 
             &:first-child {
@@ -87,17 +92,19 @@
 
             }
 
-        }
-
-        > .btn {
-
             &:only-child {
-                margin-left: 0;
-                margin-right: 0;
+
+                .btn {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+            }
+
+            .btn-group--fluid & {
+                display: block;
             }
 
         }
-
-    }
 
 }
