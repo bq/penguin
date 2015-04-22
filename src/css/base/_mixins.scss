@@ -107,7 +107,7 @@
 
 // Use: @include font-size($font-px, $base-line-height);
 // Example: @include font-size(16, $base-line-height);
-// 
+//
 // Note: Sets the line-height to a multiple of $base-line-height that's not smaller than $font-size
 
 @mixin line-height($font-size, $base-line-height) {
@@ -166,7 +166,7 @@
 // \*------------------------------------*/
 
 // Use: fluidize($px-child, $px-parent);
-// 
+//
 // Example:
 // .sidebar {
 //    width: fluidize(350px, 1000px);
@@ -231,7 +231,7 @@
 
 
 // Absolute Horizontal And Vertical aligment
-// 
+//
 // Use: @include absolute-align($aligment);
 // Example: @include absolute-align(middle);
 // Note: http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
@@ -288,7 +288,7 @@
 
 
 // Text overflow
-// 
+//
 // Requires inline-block or block for proper styling
 
 @mixin text-overflow($max-width) {
@@ -300,7 +300,7 @@
 
 
 // Place element
-// 
+//
 // Use: @include place;
 
 @mixin place-center {
@@ -517,6 +517,14 @@
     // IE8 filter
     $opacity-ie: $opacity * 100;
     filter: #{alpha(opacity = $opacity-ie)};
+}
+
+
+// Appearance
+@mixin appearance($appearance) {
+    -webkit-appearance: $appearance;
+    -moz-appearance: $appearance;
+    appearance: $appearance;
 }
 
 
