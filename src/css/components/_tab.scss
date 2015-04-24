@@ -1,3 +1,84 @@
+// Tab bar
+@mixin tab--bar {
+
+    .tab__block  {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+        .tab__block__item,
+        .tab__button__item {}
+
+        .tab__text__item,
+        .tab__block__item,
+        .tab__button__item {
+            display: table-cell;
+            vertical-align: bottom;
+            height: 100%;
+            text-align: center;
+        }
+
+            .tab__block__link,
+            .tab__button__element {
+                display: block;
+            }
+
+    .tab__content {}
+
+}
+
+// Tab inline
+@mixin tab--inline {
+
+    .tab__block  {
+        @include clearfix;
+    }
+
+        .tab__text__item,
+        .tab__block__item,
+        .tab__button__item {
+             display: inline-block;
+        }
+
+}
+
+// Tab reverse
+@mixin tab--reverse {
+
+    .tab__block  {
+        text-align: right;
+    }
+
+    .tab__content {
+        clear: both;
+    }
+
+}
+
+// Tab stacked
+@mixin tab--stacked {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .tab__block,
+    .tab__content  {
+        display: table-cell;
+        position: relative;
+    }
+
+        .tab__block__item,
+        .tab__button__item {}
+
+            .tab__block__link,
+            .tab__button__element {
+                display: block;
+            }
+
+}
+
+
 @if $styles-tab == true {
 
     /*------------------------------------*\
@@ -6,52 +87,11 @@
 
     .tab {}
 
-        .tab__block {
-
-            .tab--inline & {
-                @include clearfix;
-            }
-
-            .tab--reverse & {
-                text-align: right;
-            }
-
-            .tab--bar & {
-                display: table;
-                width: 100%;
-                height: 100%;
-            }
-
-            .tab--stacked & {
-                display: table-cell;
-            }
-
-            .tab--stacked.tab--reverse & {
-                position: relative;
-            }
-
-        }
+        .tab__block {}
 
             .tab__block__item,
             .tab__button__item {
                 position: relative;
-            }
-
-            .tab__text__item,
-            .tab__block__item,
-            .tab__button__item {
-
-                .tab--inline & {
-                    display: inline-block;
-                }
-
-                .tab--bar & {
-                    display: table-cell;
-                    vertical-align: bottom;
-                    height: 100%;
-                    text-align: center;
-                }
-
             }
 
                 .tab__block__link,
@@ -65,14 +105,6 @@
                         cursor: default;
                     }
 
-                    .tab--bar & {
-                        display: block;
-                    }
-
-                    .tab--stacked & {
-                        display: block;
-                    }
-
                 }
 
             .tab__text__item {
@@ -82,21 +114,7 @@
             }
 
 
-        .tab__content {
-
-            .tab--reverse & {
-                clear: both;
-            }
-
-            .tab--stacked & {
-                display: table-cell;
-            }
-
-            .tab--stacked.tab--reverse & {
-                position: relative;
-            }
-
-        }
+        .tab__content {}
 
             .tab__content__item {
                 display: none;
@@ -106,11 +124,52 @@
                 display: block;
             }
 
+    @if $styles-tab-bar == true {
 
-    .tab--stacked {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
+        /**
+         * Tab bar
+         */
+
+        .tab--bar {
+            @include tab--bar;
+        }
+
+    }
+
+    @if $styles-tab-inline == true {
+
+        /**
+         * Tab inline
+         */
+
+        .tab--inline {
+            @include tab--inline;
+        }
+
+    }
+
+    @if $styles-tab-reverse == true {
+
+        /**
+         * Tab reverse
+         */
+
+        .tab--reverse {
+            @include tab--reverse;
+        }
+
+    }
+
+    @if $styles-tab-stacked == true {
+
+        /**
+         * Tab stacked
+         */
+
+        .tab--stacked {
+            @include tab--stacked;
+        }
+
     }
 
 }
