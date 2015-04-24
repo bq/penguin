@@ -1,62 +1,67 @@
 // z-index
-$zindex-modal        : 99 !default;
-$zindex-spinner      : 100 !default;
+$zindex-modal             : 99 !default;
+$zindex-spinner           : 100 !default;
 
 // backdrops
-$modal-backdrop-bg   : rgba(51, 51, 51, 0.75) !default;
-$spinner-backdrop-bg : rgba(255, 255, 255, 0.75) !default;
+$modal-backdrop-bg        : rgba(51, 51, 51, 0.75) !default;
+$spinner-backdrop-bg      : rgba(255, 255, 255, 0.75) !default;
 
 // Text
-$styles-text         : true !default;
-$h1-size             : 24 !default;
-$h2-size             : 22 !default;
-$h3-size             : 20 !default;
-$h4-size             : 19 !default;
-$h5-size             : 17 !default;
-$h6-size             : 16 !default;
-$text-size-base      : 14 !default;
-$text-size-small     : 12 !default;
-$text-size-medium    : 16 !default;
-$text-size-large     : 18 !default;
+$styles-text              : true !default;
+$h1-size                  : 24 !default;
+$h2-size                  : 22 !default;
+$h3-size                  : 20 !default;
+$h4-size                  : 19 !default;
+$h5-size                  : 17 !default;
+$h6-size                  : 16 !default;
+$text-size-base           : 14 !default;
+$text-size-small          : 12 !default;
+$text-size-medium         : 16 !default;
+$text-size-large          : 18 !default;
 
 // Alert
-$styles-alert        : true !default;
+$styles-alert             : true !default;
 
 // Breadcrumb
-$styles-breadcrumb   : true !default;
+$styles-breadcrumb        : true !default;
 
 // Button
-$styles-button       : true !default;
+$styles-button            : true !default;
 
 // Dropdown
-$styles-dropdown     : true !default;
+$styles-dropdown          : true !default;
 
 // Navigation
-$styles-navigation   : true !default;
+$styles-navigation        : true !default;
+$styles-navigation-bar    : true !default;
+$styles-navigation-fluid  : true !default;
+$styles-navigation-inline : true !default;
+$styles-navigation-stacked: true !default;
+
 
 // Table
-$styles-table        : true !default;
+$styles-table             : true !default;
 
 // Form
-$styles-form         : true !default;
+$styles-form              : true !default;
 
 // Tab
-$styles-tab          : true !default;
+$styles-tab               : true !default;
 
 // Icon
-$styles-icon         : true !default;
+$styles-icon              : true !default;
 
 // Modal
-$styles-modal        : true !default;
+$styles-modal             : true !default;
 
 // Banner
-$styles-banner       : true !default;
+$styles-banner            : true !default;
 
 // Spinner
-$styles-spinner      : true !default;
+$styles-spinner           : true !default;
 
 // Paginator
-$styles-paginator    : true !default;
+$styles-paginator         : true !default;
 
 // Panel
-$styles-panel        : true !default;
+$styles-panel             : true !default;

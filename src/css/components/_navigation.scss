@@ -11,6 +11,98 @@
     #{nth($x, 1)}: #{nth($x, 2)};
 }
 
+// Nav Bar
+@mixin nav--bar {
+
+    .nav__menu  {
+        display: table;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+        .nav__menu__item {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            text-align: center;
+        }
+
+            .nav__menu__link {
+                display: block;
+            }
+
+                .nav__submenu {
+                    min-width: 100%;
+                }
+
+                    .nav__submenu__item {
+                        text-align: left;
+                    }
+
+}
+
+// Nav Fluid
+@mixin nav--fluid {
+
+    .nav__menu  {
+        display: table;
+        height: 100%;
+        position: relative;
+    }
+
+        .nav__menu__item {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            text-align: center;
+        }
+
+            .nav__menu__link {}
+
+                .nav__submenu {
+                    min-width: 100%;
+                }
+
+                    .nav__submenu__item {
+                        text-align: left;
+                    }
+
+}
+
+// Nav Stacked
+@mixin nav--stacked {
+
+    .nav__menu  {}
+
+        .nav__menu__item {}
+
+            .nav__menu__link {
+                display: block;
+            }
+
+}
+
+// Nav Inline
+@mixin nav--inline {
+
+    .nav__menu  {
+        @include clearfix;
+    }
+
+        .nav__menu__item {
+            float: left;
+        }
+
+            .nav__menu__link {}
+
+                .nav__submenu {
+                    min-width: 100%;
+                }
+
+}
+
+
 @if $styles-navigation == true {
 
     /*------------------------------------*\
@@ -19,48 +111,10 @@
 
     .nav {}
 
-        .nav__menu {
-
-            .nav--inline & {
-                @include clearfix;
-            }
-
-            .nav--bar & {
-                display: table;
-                width: 100%;
-                height: 100%;
-                position: relative;
-            }
-
-            .nav--fluid & {
-                display: table;
-                height: 100%;
-                position: relative;
-            }
-
-        }
+        .nav__menu {}
 
             .nav__menu__item {
                 position: relative;
-
-                .nav--inline & {
-                    float: left;
-                }
-
-                .nav--bar & {
-                    display: table-cell;
-                    vertical-align: middle;
-                    height: 100%;
-                    text-align: center;
-                }
-
-                .nav--fluid & {
-                    display: table-cell;
-                    vertical-align: middle;
-                    height: 100%;
-                    text-align: center;
-                }
-
             }
 
                 .nav__menu__link {
@@ -73,43 +127,11 @@
                         cursor: default;
                     }
 
-                    .nav--bar & {
-                        display: block;
-                    }
-
-                    .nav--stacked & {
-                        display: block;
-                    }
-
                 }
 
-                    .nav__submenu {
+                    .nav__submenu {}
 
-                        .nav--inline & {
-                            min-width: 100%;
-                        }
-
-                        .nav--bar & {
-                            min-width: 100%;
-                        }
-
-                        .nav--fluid & {
-                            min-width: 100%;
-                        }
-
-                    }
-
-                        .nav__submenu__item {
-
-                            .nav--bar & {
-                                text-align: left;
-                            }
-
-                            .nav--fluid & {
-                                text-align: left;
-                            }
-
-                        }
+                        .nav__submenu__item {}
 
                             .nav__submenu__link {
                                 text-decoration: none;
@@ -122,5 +144,54 @@
                                 }
 
                             }
+
+
+    @if $styles-navigation-bar == true {
+
+        /**
+         * Nav Bar
+         */
+
+        .nav--bar {
+            @include nav--bar;
+        }
+
+    }
+
+    @if $styles-navigation-fluid == true {
+
+        /**
+         * Nav Fluid
+         */
+
+        .nav--fluid {
+            @include nav--fluid;
+        }
+
+    }
+
+    @if $styles-navigation-inline == true {
+
+        /**
+         * Nav Inline
+         */
+
+        .nav--inline {
+            @include nav--inline;
+        }
+
+    }
+
+    @if $styles-navigation-stacked == true {
+
+        /**
+         * Nav Stacked
+         */
+
+        .nav--stacked {
+            @include nav--stacked;
+        }
+
+    }
 
 }
