@@ -1,3 +1,17 @@
+// banner stacked
+@mixin banner--stacked {
+
+    .banner__content,
+    .banner__content__item {
+        display: block;
+    }
+
+        .banner__content__link {
+            width: auto;
+        }
+
+}
+
 @if $styles-banner == true {
 
     /*------------------------------------*\
@@ -24,12 +38,25 @@
                 .banner__content__item & {
                     width: 100%;
 
-                    img{
+                    img {
                         width: 100%;
                     }
 
                 }
 
             }
+
+
+    @if $styles-banner-stacked == true {
+
+        /**
+         * banner stacked
+         */
+
+        .banner--stacked {
+            @include banner--stacked;
+        }
+
+    }
 
 }
