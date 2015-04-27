@@ -1,3 +1,21 @@
+// alert inline
+@mixin alert--inline {
+
+    .alert__content {
+        display: inline-block;
+    }
+
+}
+
+// alert top
+@mixin alert--top {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
 @if $styles-alert == true {
 
     /*------------------------------------*\
@@ -10,10 +28,6 @@
 
         .alert__content {
             position: relative;
-
-            .alert--inline & {
-                display: inline-block;
-            }
 
             .alert--success & {}
 
@@ -39,3 +53,29 @@
     }
 
 }
+
+@if $styles-alert-inline == true {
+
+    /**
+     * alert inline
+     */
+
+    .alert--inline {
+        @include alert--inline;
+    }
+
+}
+
+
+@if $styles-alert-top == true {
+
+    /**
+     * alert top
+     */
+
+    .alert--top {
+        @include alert--top;
+    }
+
+}
+
