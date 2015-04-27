@@ -28,6 +28,25 @@
 
 }
 
+// btn fluid
+@mixin btn--fluid {
+    width: 100%;
+}
+
+// btn-group fluid
+@mixin btn-group--fluid {
+
+    .btn {
+        width: 100%;
+    }
+
+    .btn-group__item {
+        display: block;
+    }
+
+}
+
+
 @if $styles-button == true {
 
     /*------------------------------------*\
@@ -52,20 +71,16 @@
             vertical-align: middle;
         }
 
-        .btn-group--fluid & {
-            width: 100%;
-        }
-
     }
+
+    /**
+     * btn disabled
+     */
 
     .btn--disabled {
         cursor: not-allowed;
         cursor: default;
         pointer-events: none;
-    }
-
-    .btn--fluid {
-        width: 100%;
     }
 
 
@@ -107,4 +122,26 @@
 
         }
 
+    @if $styles-button-fluid == true {
+
+        /**
+         * btn fluid
+         */
+
+        .btn--fluid {
+            @include btn--fluid;
+        }
+
+
+        /**
+         * btn-group fluid
+         */
+
+        .btn-group--fluid {
+            @include btn-group--fluid;
+        }
+
+    }
+
 }
+
