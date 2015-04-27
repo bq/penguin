@@ -21,15 +21,20 @@ $text-size-large          : 18 !default;
 
 // Alert
 $styles-alert             : true !default;
+$styles-alert-inline      : true !default;
+$styles-alert-top         : true !default;
 
 // Breadcrumb
 $styles-breadcrumb        : true !default;
 
 // Button
 $styles-button            : true !default;
+$styles-button-fluid      : true !default;
 
 // Dropdown
 $styles-dropdown          : true !default;
+$styles-dropdown-fluid    : true !default;
+$styles-dropdown-stacked  : true !default;
 
 // Navigation
 $styles-navigation        : true !default;
@@ -38,15 +43,19 @@ $styles-navigation-fluid  : true !default;
 $styles-navigation-inline : true !default;
 $styles-navigation-stacked: true !default;
 
-
 // Table
 $styles-table             : true !default;
+$styles-table-stacked     : true !default;
 
 // Form
 $styles-form              : true !default;
 
 // Tab
 $styles-tab               : true !default;
+$styles-tab-bar           : true !default;
+$styles-tab-inline        : true !default;
+$styles-tab-reverse       : true !default;
+$styles-tab-stacked       : true !default;
 
 // Icon
 $styles-icon              : true !default;
@@ -56,12 +65,15 @@ $styles-modal             : true !default;
 
 // Banner
 $styles-banner            : true !default;
+$styles-banner-stacked    : true !default;
 
 // Spinner
 $styles-spinner           : true !default;
 
 // Paginator
 $styles-paginator         : true !default;
+$styles-paginator-bar     : true !default;
+$styles-paginator-inline  : true !default;
 
 // Panel
 $styles-panel             : true !default;
