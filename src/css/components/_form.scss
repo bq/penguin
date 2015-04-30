@@ -1,6 +1,6 @@
 // Mixin
 @mixin inputs {
-    input,
+    input:not([type="checkbox"]):not([type="radio"]),
     select,
     textarea {
         @content;
