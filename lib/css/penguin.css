@@ -1871,11 +1871,9 @@ a:hover, a:focus {
  */
 .tab--reverse .tab__block {
   text-align: right;
-  left: 70%;
 }
 .tab--reverse .tab__content {
   clear: both;
-  left: -30%;
 }
 
 /**
