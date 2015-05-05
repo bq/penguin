@@ -46,19 +46,12 @@
 // Tab reverse
 @mixin tab--reverse {
 
-    .tab__block,
-    .tab__content {
-        // position: relative;
-    }
-
     .tab__block  {
         text-align: right;
-        left: 70%;
     }
 
     .tab__content {
         clear: both;
-        left: -30%;
     }
 
 }
