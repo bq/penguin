@@ -672,3 +672,15 @@
     @return map-get($z-layers, $layer);
 
 }
+
+
+
+
+
+// /*------------------------------------*\
+//     #FUNCTION PALETTE
+// \*------------------------------------*/
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
