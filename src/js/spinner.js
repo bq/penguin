@@ -11,14 +11,21 @@
         factory(root.$); // Browser global
     }
 })
+
+
 (function($) {
+
+    $('body').one('penguinTransitionEnd', function(event) {
+        console.log('terminó un transition');
+    });
 
     var defaults = {
         spinnerClass: 'spinner__element--circle',
         text: 'Loading...',
         show: false,
         backdrop: true,
-        backdropClassName: 'spinner--backdrop'
+        backdropClassName: 'spinner--backdrop',
+        transitionDuration: 350 // css transition duration + 50 ms
     };
 
     function Spinner(options, container) {
@@ -51,10 +58,16 @@
         this.settings.backdropClassName = this.settings.backdrop ? (options.backdropClassName || defaults.backdropClassName) : '';
         this.settings.spinnerClass = options.spinnerClass || defaults.spinnerClass;
         this.settings.spinnerContent = options.template || '<div class="spinner__element ' + this.settings.spinnerClass + '">' + this.settings.text + '</div>';
+        this.settings.transitionDuration = options.transitionDuration || defaults.transitionDuration;
 
     };
 
     Spinner.prototype.show = function(event) {
+
+        var transitionAdd = function() {
+            $(this.$el)[0].offsetWidth // force reflow
+            $(this.$el).addClass('transition');
+        }.bind(this);
 
         if (!this.visible) {
             if (this.$container.selector !== 'body') {
@@ -67,7 +80,7 @@
 
             this.$container.trigger($.Event('spinner:show', {
                 relatedTarget: event ? event.target : this.$container
-            }));
+            }), transitionAdd());
 
             this.$container.data('penguin.modal', null);
 
@@ -81,18 +94,30 @@
     Spinner.prototype.hide = function(event) {
 
         if (this.visible) {
-            this.$el.remove();
 
-            this.$container.removeClass('spinner-parent');
-            this.$container.removeClass('spinner--backdrop');
+            var hideSpinner = function() {
+                this.$el.remove();
+                this.$el.off();
 
-            this.$container.trigger($.Event('spinner:hide', {
-                relatedTarget: event ? event.target : this.$container
-            }));
+                this.$container.removeClass('spinner-parent');
+                this.$container.removeClass('spinner--backdrop');
 
-            this.$container.removeData('penguin.spinner');
+                this.$container.trigger($.Event('spinner:hide', {
+                    relatedTarget: event ? event.target : this.$container
+                }));
 
-            this.visible = false;
+                this.$container.removeData('penguin.spinner');
+
+                this.visible = false;
+            }.bind(this);
+
+
+            this.$el.one('penguinTransitionEnd', function() {
+                hideSpinner();
+            });
+            this.$el.emulateTransitionEnd(this.settings.transitionDuration);
+            this.$el.removeClass('transition');
+
         }
 
         return this;

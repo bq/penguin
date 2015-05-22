@@ -30,13 +30,16 @@
         var $siblings = $link.closest('.dropdown').siblings('.dropdown').find('[data-dropdown]');
 
         this.settings.selectedClass = $menu.attr('class').split(' ')[0] + '--selected';
+        this.settings.transitionClass = 'transition';
 
 
         $link.parent().toggleClass(this.settings.selectedClass);
+        $link.parent().toggleClass(this.settings.transitionClass);
 
         // Close sibling dropdowns
         if ($siblings.length !== 0) {
             $siblings.closest('.' + this.settings.selectedClass).removeClass(this.settings.selectedClass);
+            $siblings.closest('.' + this.settings.transitionClass).removeClass(this.settings.transitionClass);
             $siblings.closest('.dropdown').removeAttr('data-selected');
         }
 
@@ -66,9 +69,11 @@
         $('.dropdown[data-selected]:not([data-nocollapse])').removeAttr('data-selected');
         $('.dropdown:not([data-nocollapse]) [data-rel="dropdown"]').each(function() {
             var className = $(this).data('penguin.dropdown').settings.selectedClass;
+            var transitionName = $(this).data('penguin.dropdown').settings.transitionClass;
             var dropdown = $(this).closest('.dropdown');
 
             dropdown.removeClass(className);
+            dropdown.removeClass(transitionName);
         });
         $('html').off('click', Dropdown.reset);
 
