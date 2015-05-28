@@ -2069,6 +2069,7 @@ a:hover, a:focus {
 }
 
 .modal--backdrop {
+  background-color: #333333;
   background-color: rgba(51, 51, 51, 0.75);
 }
 
@@ -2203,6 +2204,7 @@ a:hover, a:focus {
 }
 
 .spinner--backdrop {
+  background-color: white;
   background-color: rgba(255, 255, 255, 0.75);
 }
 

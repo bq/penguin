@@ -108,6 +108,7 @@
 
     .spinner--backdrop {
         background-color: $spinner-backdrop-bg;
+        background-color: rgba($spinner-backdrop-bg, $spinner-backdrop-bg-opacity);
     }
 
     .spinner--fullscreen {
