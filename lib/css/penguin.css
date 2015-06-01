@@ -62,7 +62,6 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 a, button {
   -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
 }
 
 a img {
