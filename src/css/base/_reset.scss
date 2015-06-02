@@ -36,6 +36,8 @@
     line-height: 1;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // Reset the list style of an element.
@@ -96,6 +98,8 @@
 
 // Reset input states
 @mixin reset-input-state {
+
+    -webkit-appearance: none;
 
     &[type=number]::-webkit-inner-spin-button, &[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;
