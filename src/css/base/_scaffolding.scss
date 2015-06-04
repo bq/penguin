@@ -51,5 +51,4 @@ img {
 a {
     cursor: pointer;
     @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color);
-    @include hover-link;
 }
