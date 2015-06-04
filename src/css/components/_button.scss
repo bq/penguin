@@ -14,7 +14,6 @@
     &:focus {
         color: $color-hover;
         background-color: $background-hover;
-        text-decoration: $button-text-decoration;
 
         @if $border-color-hover != none {
             border-color: $border-color-hover;
