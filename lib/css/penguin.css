@@ -250,12 +250,9 @@ img {
 
 a {
   cursor: pointer;
-  color: #272822;
-  text-decoration: none;
   outline: none;
-}
-a:hover, a:focus {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #272822;
 }
 
 /*------------------------------------*\
@@ -1577,6 +1574,9 @@ a:hover, a:focus {
 .text li, .text dt, .text dd, .text p {
   font-size: 0.875em;
 }
+.text a:hover, .text a:focus {
+  text-decoration: underline;
+}
 
 .text-small {
   font-size: 0.75em;
@@ -1966,6 +1966,7 @@ a:hover, a:focus {
 .form .input:not(.input--checkbox):not(.input--radio) select,
 .form .input:not(.input--checkbox):not(.input--radio) textarea {
   width: 100%;
+  line-height: normal;
 }
 .form .input:not(.input--checkbox):not(.input--radio) input, .form .input:not(.input--checkbox):not(.input--radio) select {
   vertical-align: middle;

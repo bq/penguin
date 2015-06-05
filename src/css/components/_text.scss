@@ -46,6 +46,14 @@
             font-size: em($text-size-base);
         }
 
+        @if $text-link-hover  == true {
+            a {
+                &:hover, &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+
     }
 
     .text-small {

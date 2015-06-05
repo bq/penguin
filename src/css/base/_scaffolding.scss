@@ -50,5 +50,7 @@ img {
 // Links
 a {
     cursor: pointer;
+    outline: none;
+    text-decoration: none;
     @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color);
 }
