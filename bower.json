@@ -1,6 +1,6 @@
 {
     "name": "bq/penguin",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Penguin is a lightweight and extensible front-end framework built with Sass to kickstart any web project.",
     "repository": {
         "type": "git",
@@ -31,6 +31,9 @@
     }],
     "dependencies": {
         "jquery": "2.1.1"
+    },
+    "support": {
+        "issues": "https://github.com/bq/penguin/issues"
     },
     "keywords": [
         "penguin",
