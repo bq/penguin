@@ -70,7 +70,7 @@ First of all, you should install Node and Grunt.
 If you want to build the project locally, you have to run the [Grunt](http://gruntjs.com/) task `grunt build`. This task will concat and minify the sources and create the README.md. Before all this, you do not forget to run `npm install` and `bower install`.
 
 
-###Compiled and minified CSS and JavaScript.
+### Compiled and minified CSS and JavaScript.
 
 You should add to project stylesheet and link it in the header of your HTML file, like so:
 
